@@ -1,6 +1,6 @@
 # CyberQuest — Full-Stack Cybersecurity Learning Platform
 
-CyberQuest is a gamified cybersecurity training platform designed to teach people how to recognize, analyze, and mitigate online threats. The project is built as a full-stack application featuring a React SPA frontend and a Spring Boot (Java) REST API backend.
+CyberQuest is a gamified cybersecurity training platform designed to teach people how to recognize, analyze, and mitigate online threats. The project is built as a full-stack application featuring a React SPA frontend and a Spring Boot (Java) backend.
 
 ---
 
@@ -13,6 +13,8 @@ CyberQuest is a gamified cybersecurity training platform designed to teach peopl
 *   **Agent Profile & Preferences**: Modify agent codenames, passwords, dark/light themes, sound feedback, and accessibility scaling parameters.
 
 ---
+
+## Run this on web browser : https://cyber-awareness-quiz-platform.vercel.app/
 
 ## 🛠️ Prerequisites
 
