@@ -1,0 +1,14 @@
+#!/bin/sh
+MAVEN_VERSION="3.9.6"
+M2_HOME="$HOME/.m2/wrapper/dists/apache-maven-$MAVEN_VERSION-bin"
+
+if [ ! -f "$M2_HOME/apache-maven-$MAVEN_VERSION/bin/mvn" ]; then
+    echo "Downloading Maven $MAVEN_VERSION..."
+    mkdir -p "$M2_HOME"
+    curl -sL "https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/$MAVEN_VERSION/apache-maven-$MAVEN_VERSION-bin.zip" -o /tmp/maven.zip
+    unzip -q /tmp/maven.zip -d "$M2_HOME"
+    rm /tmp/maven.zip
+fi
+
+chmod +x "$M2_HOME/apache-maven-$MAVEN_VERSION/bin/mvn"
+exec "$M2_HOME/apache-maven-$MAVEN_VERSION/bin/mvn" "$@"
